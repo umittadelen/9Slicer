@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9-Slice</title>
+    <link rel="preload" href="fonts/mc-regular.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="fonts/mc-bold.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="./assets/main.png" as="image">
+    <link rel="preload" href="./assets/inp.png" as="image">
+    <link rel="preload" href="./assets/prv.png" as="image">
+    <link rel="preload" href="./assets/btn_blue.png" as="image">
+    <link rel="preload" href="./assets/btn_blue_p.png" as="image">
+    <link rel="preload" href="./assets/btn_green.png" as="image">
+    <link rel="preload" href="./assets/btn_green_p.png" as="image">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main">
+        <h1>9-Slice</h1>
+
+        <div class="preview">
+            <img id="texture-preview" alt="">
+            <div id="slice-v"></div>
+            <div id="slice-h"></div>
+        </div>
+
+        <label for="texture" class="cfu btn">Choose File</label>
+        <input type="file" id="texture" accept="image/*">
+
+        <div class="row">
+            <label>Top <input type="number" id="top-border" min="0" value="0" autocomplete="off"></label>
+            <label>Right <input type="number" id="right-border" min="0" value="0" autocomplete="off"></label>
+            <label>Bottom <input type="number" id="bottom-border" min="0" value="0" autocomplete="off"></label>
+            <label>Left <input type="number" id="left-border" min="0" value="0" autocomplete="off"></label>
+            <label>Scale <input type="number" id="scale" min="1" value="3"></label>
+        </div>
+
+        <div class="row">
+            <span class="select">
+                <select id="format">
+                    <option value="css">CSS</option>
+                    <option value="unity">Unity</option>
+                    <option value="minecraft">Minecraft</option>
+                    <option value="godot">Godot</option>
+                </select>
+            </span>
+            <button class="green btn" id="copy"><span>Copy</span><span>Copied</span></button>
+        </div>
+
+        <textarea id="output" rows="5" readonly></textarea>
+    </div>
+
+    <a id="credit" href="https://www.umittadelen.net" target="_blank">made by umittadelen</a>
+    <script src="./script.js"></script>
+</body>
+</html>
